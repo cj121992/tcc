@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.melot</groupId>
+		<artifactId>melot-transaction</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>melot-transaction-log</artifactId>
+	<name>melot-transaction-log</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<springboot.version>1.5.3.RELEASE</springboot.version>
+		<melot.common.dependencies.version>1.1.0</melot.common.dependencies.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.melot</groupId>
+			<artifactId>melot-transaction-utils</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.melot</groupId>
+			<artifactId>melot-mq-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.melot.module</groupId>
+			<artifactId>kkrpc-core</artifactId>
+			<version>1.1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javassist/javassist -->
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.12.1.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>com.melot.common</groupId>
+			<artifactId>kk-transaction-hist</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.melot</groupId>
+				<artifactId>melot-common-dependencies</artifactId>
+				<version>${melot.common.dependencies.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${springboot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

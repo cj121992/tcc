@@ -1,0 +1,1 @@
+logtransaction=com.melot.common.transaction.log.context.intercept.LogTransactionIntercept
